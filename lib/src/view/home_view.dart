@@ -21,14 +21,14 @@ class _HomeViewState extends State<HomeView> {
 
   void _startPeriodicRefresh() {
     _timer = Timer.periodic(Duration(seconds: 30), (timer) {
-      // Trigger a refresh in the BitcoinViewModel
+
       context.read<BitcoinViewModel>().getBitcoin();
     });
   }
 
   @override
   void dispose() {
-    _timer.cancel(); // Cancel the timer when the widget is disposed
+    _timer.cancel();
     super.dispose();
   }
 
@@ -57,7 +57,7 @@ class _HomeViewState extends State<HomeView> {
                 style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
               ),
               SizedBox(height: 20),
-              if (bitcoinViewModel.loading) // Show CircularProgressIndicator if loading
+              if (bitcoinViewModel.loading)
                 Center(child: CircularProgressIndicator())
               else ...[
                 Text(
