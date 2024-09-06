@@ -10,3 +10,5 @@ Key Features:
 4- Clean and Scalable Codebase: By using MVVM and Provider, the app's codebase is organized, making it easier to scale and add new features in the future.
 
 This approach ensures that the app remains responsive and easy to maintain, with a clear distinction between the data layer, business logic, and UI components.
+
+![image](https://github.com/user-attachments/assets/e39c60f0-1128-4d66-8259-a9ef530dc3fe)
