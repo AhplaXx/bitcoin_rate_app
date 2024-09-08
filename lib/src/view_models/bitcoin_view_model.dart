@@ -34,10 +34,9 @@ class BitcoinViewModel extends ChangeNotifier {
     var response = await BitcoinServices.getBitcoin();
 
     if (response is Success) {
-      // JSON yanıtını BitcoinModel nesnesine dönüştürme
       _bitcoin = BitcoinModel.fromJson(response.response as Map<String, dynamic>);
     } else if (response is Failure) {
-      print("Hata oluştu: ${response.response}");
+      print("Failure: ${response.response}");
     }
 
     setLoading = false;
